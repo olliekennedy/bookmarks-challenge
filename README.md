@@ -7,10 +7,10 @@ As a user
 So i can view my bookmarks
 I would like to create a list
 ```
-•controller
-•bookmark class
-•bookmark view
-
+The above user story will use the following **elements**:
+* controller
+* bookmark class
+* bookmark view
 
 - When the user visits bookmarks via the '/bookmarks' path sends the request through to our bookmark manager (aka the controller)
 - When the controller gets the request, it asks the `Bookmark` class to give it all the bookmarks, i.e. the controller asks for `Bookmark.all`.
@@ -22,8 +22,6 @@ As a user
 So i can add new bookmarks
 I would like to be able to add to the list
 ```
-
-
 
 ```
 As a user
