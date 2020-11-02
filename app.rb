@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra/base'
-require 'bookmarks'
+require './lib/bookmarks.rb'
 # This is my new class
 class BookmarkManager < Sinatra::Base
   get '/' do
@@ -13,7 +13,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    erb :bookmarks
+    @bookmarks = Bookmarks.new.all
+    erb :'bookmarks/index'
   end
 
   run! if app_file == $PROGRAM_NAME
