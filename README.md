@@ -12,6 +12,8 @@ The above user story will use the following **elements**:
 * bookmark class
 * bookmark view
 
+
+
 - When the user visits bookmarks via the '/bookmarks' path sends the request through to our bookmark manager (aka the controller)
 - When the controller gets the request, it asks the `Bookmark` class to give it all the bookmarks, i.e. the controller asks for `Bookmark.all`.
 - The `Bookmark` class goes and gets the bookmarks, and gives back all the bookmarks in an array to the controller.
