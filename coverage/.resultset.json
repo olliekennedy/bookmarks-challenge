@@ -1,50 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ok/Projects/pairing-challenges/bookmark-manager/02112020/bookmarks-challenge/app.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/ok/Projects/pairing-challenges/bookmark-manager/02112020/bookmarks-challenge/spec/features/index_page_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ok/Projects/pairing-challenges/bookmark-manager/02112020/bookmarks-challenge/spec/features/test_hello_world_page_spec.rb": {
+      "/Users/heatherwarman/Coding/Bookmarks/app.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          1,
-          1,
           null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
           null
         ]
       }
     },
-    "timestamp": 1604331320
+    "timestamp": 1604334985
   }
 }
