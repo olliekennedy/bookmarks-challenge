@@ -1,0 +1,31 @@
+As a user
+So i can view my bookmarks
+I would like to create a list
+
+As a user
+So i can add new bookmarks
+I would like to be able to add to the list
+
+As a user
+So I can delete bookmarks
+I would like to be able to retract from the list
+
+As a user
+So i can see the most updated page/information
+I would be able to update an existing bookmark
+
+As a user
+So I can summarise the page
+I would like to be able to comment on bookmarks
+
+As a user
+So I can organise my bookmarks
+I would like to be able to tag bookmarks into categories
+
+As a user
+So I can find a page
+I would like to filter existing bookmarks by tag
+
+As a user
+So other people cannot change my bookmarks
+I would like to restrict access to only myself
