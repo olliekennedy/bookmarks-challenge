@@ -5,7 +5,7 @@
 * From your project root folder run `psql -f db/migrations/01_create_db.sql`
 * psql `\c bookmark_manager;`
 * Run 02_create_bookmarks_table.sql
-* Repeat the above instructions to create a bookmark_manager_test database
+* Repeat the above instructions to create a bookmark_manager_test database using `psql -f db/migrations/01_create_db_test.sql`
 
 *
 
@@ -29,10 +29,12 @@ The above user story will use the following **elements**:
 - The `Bookmark` class goes and gets the bookmarks, and gives back all the bookmarks in an array to the controller.
 - The controller renders the array of bookmarks to a webpage, which it sends as a response to the user
 
+
+add new bookmarks
 ```
 As a user
 So i can add new bookmarks
-I would like to be able to add to the list
+I would like to be able to add a bookmark to my bookmark list
 ```
 
 ```
