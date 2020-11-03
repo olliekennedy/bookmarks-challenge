@@ -13,4 +13,10 @@ feature 'bookmarks-page' do
     visit '/bookmarks'
     expect(page).to have_content('http://www.google.com')
   end
+  scenario 'add bookmark' do
+    visit '/bookmarks'
+    fill_in 'bookmark_url', :with => 'http://www.pizza.org'
+    click_on('Add bookmark')
+    expect(page).to have_content('http://www.pizza.org')
+  end
 end
