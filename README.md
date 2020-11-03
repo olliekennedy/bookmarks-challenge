@@ -1,5 +1,12 @@
 # Bookmark Manager
 
+## DB Setup
+
+* Run `psql`
+* Run create_db.sql
+* psql `\c bookmark_manager;`
+* Run create_bookmarks_table.sql
+
 ## User Stories
 
 ```
