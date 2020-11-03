@@ -1,3 +1,4 @@
+\c bookmark_manager
 INSERT INTO bookmarks(url)
 VALUES('http://www.makersacademy.com'),
       ('http://askjeeves.com'),

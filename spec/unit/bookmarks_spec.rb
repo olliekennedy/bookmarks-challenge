@@ -1,12 +1,11 @@
 # frozen_string_literal: true
+require 'bookmarks'
 
 RSpec.describe Bookmarks do
   describe '#all' do
     it 'returns a list of bookmarks' do
-      bookmarks = subject.all
-      expect(bookmarks).to include('https://www.google.com')
-      expect(bookmarks).to include('https://www.amazon.com')
-      expect(bookmarks).to include('https://www.youtube.com')
+      bookmarks = Bookmarks.all
+      expect(bookmarks).to include('http://www.google.com')
     end
   end
 end

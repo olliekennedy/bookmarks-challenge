@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'bookmarks'
 
 feature 'bookmarks-page' do
   scenario 'show title' do
@@ -7,8 +8,6 @@ feature 'bookmarks-page' do
   end
   scenario 'show list of bookmarks' do
     visit '/bookmarks'
-    expect(page).to have_content('https://www.google.com')
-    expect(page).to have_content('https://www.amazon.com')
-    expect(page).to have_content('https://www.youtube.com')
+    expect(page).to have_content('http://www.google.com')
   end
 end

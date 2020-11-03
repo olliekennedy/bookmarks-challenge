@@ -2,10 +2,13 @@
 
 ## DB Setup
 
-* Run `psql`
-* Run 01_create_db.sql
+* From your project root folder run `psql -f db/migrations/01_create_db.sql` 
 * psql `\c bookmark_manager;`
 * Run 02_create_bookmarks_table.sql
+
+
+*
+
 
 ## User Stories
 
