@@ -3,9 +3,9 @@
 ## DB Setup
 
 * Run `psql`
-* Run create_db.sql
+* Run 01_create_db.sql
 * psql `\c bookmark_manager;`
-* Run create_bookmarks_table.sql
+* Run 02_create_bookmarks_table.sql
 
 ## User Stories
 
