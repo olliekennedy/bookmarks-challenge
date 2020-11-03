@@ -13,7 +13,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.new.all
+    @bookmarks = Bookmarks.all
     erb :'bookmarks/index'
   end
 
