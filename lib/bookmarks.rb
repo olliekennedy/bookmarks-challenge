@@ -6,9 +6,13 @@ class Bookmarks
 
   def self.all
     begin
-        con = PG.connect(dbname: 'bookmark_manager')#, :user => 'kalindifonda' (implicit user name I think)
-        result = con.exec "SELECT url FROM bookmarks"
-        result.map { |bookmark| bookmark['url'] }
+      if ENV['RACK_ENV'] == 'test'
+        con = PG.connect(dbname: 'bookmark_manager_test')
+      else
+        con = PG.connect(dbname: 'bookmark_manager')
+      end
+      result = con.exec "SELECT url FROM bookmarks"
+      result.map { |bookmark| bookmark['url'] }
 
     rescue PG::Error => e
       # We want R rated errors!
