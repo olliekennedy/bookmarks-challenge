@@ -3,8 +3,6 @@ class DBConnection
     begin
       con = PG.connect(dbname: test_or_dev_db(database))
       con.exec query
-    rescue PG::Error => e
-      puts e.message
     ensure
       con.close if con
     end

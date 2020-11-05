@@ -14,6 +14,6 @@ def populate_test_bookmarks_table
                      { title: 'Ask Jeeves', url: 'http://askjeeves.com' },
                      { title: 'Google', url: 'http://www.google.com' } ]
   bookmarks_list.each do |bm|
-    Bookmarks.create(bm[:title], bm[:url])
+    Bookmark.create(title: bm[:title], url: bm[:url])
   end
 end

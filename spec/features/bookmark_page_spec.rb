@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'bookmarks'
+require 'bookmark'
 
 feature 'bookmarks-page' do
   before(:each) do
@@ -15,8 +15,8 @@ feature 'bookmarks-page' do
   end
   scenario 'add bookmark' do
     visit '/bookmarks'
-    fill_in 'bookmark_title', :with => 'PIZZA'
-    fill_in 'bookmark_url', :with => 'http://www.pizza.org'
+    fill_in 'title', :with => 'PIZZA'
+    fill_in 'url', :with => 'http://www.pizza.org'
     click_on('Add bookmark')
     expect(page).to have_link('PIZZA', href: 'http://www.pizza.org')
   end

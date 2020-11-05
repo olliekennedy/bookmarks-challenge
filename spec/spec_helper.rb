@@ -41,6 +41,7 @@ RSpec.configure do |config|
   # assertions if you prefer.
   config.before(:each) do
     truncate_test_bookmarks_table
+    populate_test_bookmarks_table
   end
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
