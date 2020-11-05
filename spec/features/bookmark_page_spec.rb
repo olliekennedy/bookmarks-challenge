@@ -18,6 +18,6 @@ feature 'bookmarks-page' do
     fill_in 'bookmark_title', :with => 'PIZZA'
     fill_in 'bookmark_url', :with => 'http://www.pizza.org'
     click_on('Add bookmark')
-    expect(page).to have_content('PIZZA')
+    expect(page).to have_link('PIZZA', href: 'http://www.pizza.org')
   end
 end
