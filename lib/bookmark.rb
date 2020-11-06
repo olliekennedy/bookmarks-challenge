@@ -14,17 +14,32 @@ class Bookmark
   def self.create(title:, url:)
     result = DBConnection.query("bookmark_manager",
       "INSERT INTO bookmarks(title, url)
-      VALUES('#{title}', '#{httpeed(url)}')
-      RETURNING id, title, url;")
+       VALUES('#{title}', '#{httpeed(url)}')
+       RETURNING id, title, url;")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   def self.all
     result = DBConnection.query("bookmark_manager",
-                                "SELECT title, url FROM bookmarks")
+      "SELECT id, title, url FROM bookmarks")
     result.map { |bookmark|
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     }
+  end
+
+  def self.delete(id:)
+    DBConnection.query("bookmark_manager",
+      "DELETE from bookmarks
+       WHERE id='#{id}'")
+  end
+
+  def self.update(id:, title:, url:)
+    result = DBConnection.query("bookmark_manager",
+      "UPDATE bookmarks
+       SET title='#{title}', url='#{httpeed(url)}'
+       WHERE id='#{id}'
+       RETURNING id, title, url")
+    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   private

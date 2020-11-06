@@ -30,7 +30,19 @@ RSpec.describe Bookmark do
     it 'deletes a bookmark' do
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       Bookmark.delete(id: bookmark.id)
-      expect(bookmark.id).not_to eq persisted_data['id']
+      persisted_data = persisted_data(id: bookmark.id)
+      expect(persisted_data).to be_nil
+    end
+  end
+  describe '#update' do
+    it 'updates a bookmark' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+      bookmark = Bookmark.update(id: bookmark.id, title: 'Test URL', url: 'http://www.testurl.com')
+      expect(bookmark.title).to eq 'Test URL'
+      expect(bookmark.url).to eq 'http://www.testurl.com'
+      persisted_data = persisted_data(id: bookmark.id)
+      expect(persisted_data['title']).to eq 'Test URL'
+      expect(persisted_data['url']).to eq 'http://www.testurl.com'
     end
   end
 end
