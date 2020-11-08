@@ -12,10 +12,10 @@
       <a href="<%= bookmark.url %>">
         <%= bookmark.title %>
       </a>
-      <form action="/bookmarks/update/<%= bookmark.id %>" method="post">
-        <input type="text" name="updated_title" placeholder="Title">
-        <input type="text" name="updated_url" placeholder="URL">
-        <input type="submit" value="Update bookmark">
+      <form action="/bookmarks/update/<%= bookmark.id %>" method="get">
+        <button>
+          Update
+        </button>
       </form>
       <form action="/bookmarks/delete/<%= bookmark.id %>" method="post">
         <button>

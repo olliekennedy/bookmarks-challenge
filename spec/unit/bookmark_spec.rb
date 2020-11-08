@@ -45,4 +45,10 @@ RSpec.describe Bookmark do
       expect(persisted_data['url']).to eq 'http://www.testurl.com'
     end
   end
+  describe '#find' do
+    it 'finds the correct bookmark and returns the object' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+      expect(Bookmark.find(id: bookmark.id).url).to eq 'http://www.testbookmark.com'
+    end
+  end
 end

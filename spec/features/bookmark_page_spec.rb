@@ -27,14 +27,14 @@ feature 'bookmarks-page' do
     first('.bookmark').click_button('Delete')
     expect(page).not_to have_link(bookmark.title)
   end
-  scenario 'update bookmark' do
-    truncate_test_bookmarks_table
-    bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
-    visit '/bookmarks'
-    first('.bookmark').fill_in 'updated_title', :with => 'Test URL'
-    first('.bookmark').fill_in 'updated_url', :with => 'http://www.testurl.com'
-    first('.bookmark').click_button('Update')
-    expect(page).not_to have_link(bookmark.title)
-    expect(page).to have_link('Test URL')
-  end
+  # scenario 'update bookmark' do
+  #   truncate_test_bookmarks_table
+  #   bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+  #   visit '/bookmarks'
+  #   first('.bookmark').fill_in 'updated_title', :with => 'Test URL'
+  #   first('.bookmark').fill_in 'updated_url', :with => 'http://www.testurl.com'
+  #   first('.bookmark').click_button('Update')
+  #   expect(page).not_to have_link(bookmark.title)
+  #   expect(page).to have_link('Test URL')
+  # end
 end
